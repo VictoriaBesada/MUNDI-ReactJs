@@ -1,13 +1,14 @@
+import React from 'react';
 import './App.css';
-import ResponsiveAppBar from './components/NavBar';
+import NavBar from './components/navbar/NavBar';
+import ItemListContainer from './components/itemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <div className="App">
-      <header className="mundi-header">
-        <ResponsiveAppBar/>
-      </header>
+      <NavBar/>
+      <ItemListContainer/>
     </div>
   );
 }
