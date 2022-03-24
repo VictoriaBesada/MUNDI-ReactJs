@@ -3,6 +3,7 @@ import Card from '../card/Card';
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
+
   return(
     <div className='container-cards'>
       <Card  title='Nueva York' duracion='15 dias' precio={15000} servicios='Pasaje aéreo, ruta: Buenos Aires / New York / Buenos Aires. Taslados de llegada y salida. 14 noches de alojamiento en The New Yorker a Wyndham Hotel 3*. Asistencia al viajero con seguro de cancelación.'/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemCount from '../itemCount/ItemCount';
 import './Card.css';
 
 
@@ -17,13 +18,16 @@ export default function Card(props) {
                     <i className="fa fa-star" aria-hidden="true"></i>
                     <i className="fa fa-star" aria-hidden="true"></i>
                 </span>
-                    <p>Duracion: {props.duracion}</p>
+                <p>Duracion: {props.duracion}</p>
+                <div className='contador'>
+                    <p><ItemCount/></p>
+                </div>
                 <div className="control">
                     <button className="btn">
                         <span className="price">USD {props.precio}</span>
                         <span className="shopping-cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i></span>
                         <span className="buy">Comprar</span>
-                   </button>
+                    </button>
                 </div>
 
             </div>
@@ -36,8 +40,8 @@ export default function Card(props) {
                 <div className="info">
                     <h2> Servicios incluidos:</h2>
                     <ul>
-                    {props.servicios}
-                     </ul>
+                        {props.servicios}
+                    </ul>
                 </div>
             </div>
 
@@ -47,4 +51,3 @@ export default function Card(props) {
 
     )
 }
-
