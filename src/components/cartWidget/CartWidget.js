@@ -1,5 +1,4 @@
 import React from 'react';
-import './CartWidget.css';
 import { BsCartPlus } from 'react-icons/bs';
 
 class CartWidget extends React.Component {

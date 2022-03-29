@@ -4,10 +4,8 @@ import { GrAdd } from 'react-icons/gr';
 import { IoRemove } from 'react-icons/io5';
 
 
-
-function ItemCount() {
+function ItemCount({stock}) {
     const [count, setCount] = useState(1);
-    const [stock, setStock] = useState(10);
 
     const onAdd = () => {
 

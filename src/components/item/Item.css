@@ -1,0 +1,29 @@
+.card-item img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container-card-data {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  border-style: inset;
+  border-top: 1px;
+}
+
+.container-card-data h2 {
+  font-size: 19px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.container-card-data p {
+  font-size: 14px;
+  font-weight: 300;
+}

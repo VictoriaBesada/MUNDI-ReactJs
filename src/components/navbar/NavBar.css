@@ -4,7 +4,7 @@
   border-bottom: 1px solid black;
 }
 nav {
-    margin: 27px auto 0;
+    margin: auto;
     position: relative;
     width: 590px;
     height: 50px;
@@ -76,8 +76,7 @@ nav {
   body {
     font-size: 12px;
     font-family: sans-serif;
-    background: #2c3e50;
-  }
+    }
   h1 {
     text-align: center;
     margin: 40px 0 40px;
