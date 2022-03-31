@@ -5,7 +5,7 @@ import './ItemListContainer.css';
 const ItemListContainer = () => {
   return (
     <section className="item-list-container">
-      <h2 className="item-list-container__title">Destinos destacados</h2>
+      <h2 className="item-list-container__title">Destinos populares</h2>
       <ItemList/>
     </section>
   );

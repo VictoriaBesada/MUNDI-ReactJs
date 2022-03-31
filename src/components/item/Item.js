@@ -1,20 +1,20 @@
 import React from 'react';
 import ItemCount from '../itemCount/ItemCount';
+import Button from '@mui/material/Button';
 import './Item.css';
 
-const Item = ({ titulo, descripcion, precio, imagen, id, stock }) => {
+const Item = (item) => {
 
   return (
     <div className="card-item">
-      <img src={`./${imagen}`} alt={imagen} />
+      <img src={item.imagen} alt='imagen del destino' />
 
       <div className='container-card-data'>
-        <h2>{titulo}</h2>
-        <p>Precio : $ {precio}</p>
-        <p>Descripcion : {descripcion}</p>
+        <h2>{item.titulo}</h2>
+        <p>Precio : USD {item.precio}</p>
         <a href='#'>Ver itinerario</a>
-        <ItemCount stock={stock} />
-        <button>Comprar</button>
+        <ItemCount stock={item.stock} />
+        <Button variant="contained">Agregar al carrito</Button>
       </div>
     </div>
   );

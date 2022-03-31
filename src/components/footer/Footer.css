@@ -1,0 +1,34 @@
+.nosotros{
+    grid-area: nosotros;
+    font-size: small;
+    padding: 1.5rem;
+}
+
+.destinos{
+    grid-area: destinos;
+    padding: 1.5rem;
+}
+
+.links{
+    grid-area: links;
+    padding: 1.5rem;
+
+}
+
+footer{
+    display: grid;
+    grid-gap: 1rem;
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    grid-template-areas: 
+    'nosotros links destinos';
+    grid-template-columns: 3fr 3fr 3fr;
+}
+
+.lista{
+    list-style: none;
+    display: block;
+    background: none;
+}
+

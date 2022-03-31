@@ -16,16 +16,15 @@ function ItemCount({stock}) {
 
     const removeStock = () => {
 
-        if(count > 1){
-            setCount(count - 1)
-        }
+        setCount(count - 1)
+        
     }
 
     return (
         <div className='contador'>
             <button onClick={onAdd}><GrAdd/></button>
             <p>Cantidad: {count}</p>
-            <button onClick={removeStock}><IoRemove/></button>
+            <button onClick={removeStock} disabled={count <=1 ? true : null}><IoRemove/></button>
         </div>
     )
 }
