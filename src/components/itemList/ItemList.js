@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Item from '../item/Item';
 import { getAllProductsFromDB } from '../../data/getProducts'
 import './ItemList.css';
+// import { Navigate } from 'react-router-dom';
+
+
 
 
 
@@ -14,9 +17,12 @@ const ItemList = () => {
     getAllProductsFromDB(setProducts);
   }, []);
 
+  // const changePage = () => {
+  //  Navigate(`/product/${id}`)
+  // }onClick={changePage}
 
   return (
-    <div className="product-list-container">
+    <div className="product-list-container" >
       {products.length ? (
         <>
           {products.map((product) => {

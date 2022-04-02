@@ -9,7 +9,7 @@ const Home = () => {
     return(
         <Container className='container-general'>
             <ItemListContainer/>
-            <ItemDetailContainer/>
+            <ItemDetailContainer id={1}/>
         </Container>
     )
 }

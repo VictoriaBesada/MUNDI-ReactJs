@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import './ItemDetailContainer.css';
 import ItemDetail from '../itemDetail/ItemDetail';
 import { getProductById } from '../../data/getProducts'
 
@@ -13,8 +12,8 @@ const ItemDetailContainer = ({id}) => {
     }, [id]);
 
     return(
-        <div className="detail-list-container">
-            <section className="item-detail-container">
+        <div>
+            <section>
                 {product ? <ItemDetail item={product} /> : <p>Buscando tu viaje...</p>}
             </section>
         </div>
