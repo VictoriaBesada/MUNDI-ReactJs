@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import ItemDetail from '../itemDetail/ItemDetail';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import { getProductById } from '../../data/getProducts'
 
 const ItemDetailContainer = ({id}) => {
@@ -8,7 +8,6 @@ const ItemDetailContainer = ({id}) => {
 
     useEffect(() => {
         getProductById(Number(id), setProduct);
-        console.log(product);
     }, [id]);
 
     return(

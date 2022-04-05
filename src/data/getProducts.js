@@ -1,6 +1,7 @@
-import { productList } from "./products";
+import productList from '../data/products';
 
-const getById = (id, array) => array.find((el) => el.id === id);
+const getById = (id, array) => array.find((e) => e.id === id);
+
 
 const getProducts = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -14,7 +15,7 @@ const getAllProductsFromDB = async (setState) => {
       setState(result);
     } catch (error) {
       console.log(error);
-      alert('No podemos mostrar los productos en este momento');
+      alert('No podemos mostrar los viajes en este momento');
     }
 };
 

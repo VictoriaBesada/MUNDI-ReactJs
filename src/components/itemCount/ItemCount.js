@@ -23,7 +23,7 @@ function ItemCount({stock}) {
     return (
         <div className='contador'>
             <button onClick={onAdd}><GrAdd/></button>
-            <p>Cantidad: {count}</p>
+            <p>Pasajeros: {count}</p>
             <button onClick={removeStock} disabled={count <=1 ? true : null}><IoRemove/></button>
         </div>
     )

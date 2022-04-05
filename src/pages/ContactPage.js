@@ -7,7 +7,7 @@ const Contact = () => {
     return(
         <Container>
             <h3>Contacto</h3>
-            <div className="container">
+            <div className="container" style={{margin:'2rem'}}>
                 <form>
                     <label>Nombre</label>
                     <input type="text" id="fname" name="firstname" placeholder="Tu nombre.."/>
@@ -22,7 +22,7 @@ const Contact = () => {
                     </select>
                     <label>Mensaje</label>
                     <textarea id="subject" name="subject" placeholder="Escribi tu consulta.." style={{height:'200px'}}></textarea>
-                    <input type="submit" value="Enviar"/>
+                    <input type="submit" value="Enviar" style={{backgroundColor:'#C5ACF7', color:'black'}}/>
                 </form>
             </div>
         </Container>

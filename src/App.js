@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/navbar/NavBar';
+import NavBar from './components/Navbar/NavBar';
 import PageNotFound from './pages/PageNotFound';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Nosotros from './pages/Nosotros';
-import Destinos from './pages/Destinos';
-import Carrito from './pages/Carrito';
-import Footer from './components/footer/Footer';
-
+import Home from './pages/HomePage';
+import Contact from './pages/ContactPage';
+import Nosotros from './pages/NosotrosPage';
+import Destinos from './pages/DestinosPage';
+import Carrito from './pages/CarritoPage';
+import Footer from './components/Footer/Footer';
+import DetailPage from './pages/ItemDetailPage';
 
 function App() {
   return (
@@ -17,17 +17,19 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='/Nosotros' element={<Nosotros />} />
+          <Route path='/NosotrosPage' element={<Nosotros />} />
           <Route path='/' element={<Home />} />
-          <Route path='/Destinos' element={<Destinos />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/Carrito' element={<Carrito />} />
+          <Route path='/DestinosPage' element={<Destinos />} />
+          <Route path='/ContactPage' element={<Contact />} />
+          <Route path='/CarritoPage' element={<Carrito />} />
+          <Route path='/:products/' element={<Home/>} />
+          <Route path='/:products/:id' element={<DetailPage/>}/>
           <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;
