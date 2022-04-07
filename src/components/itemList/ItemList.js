@@ -4,9 +4,6 @@ import { getAllProductsFromDB } from '../../data/getProducts'
 import './ItemList.css';
 
 
-
-
-
 const ItemList = () => {
 
   const [products, setProducts] = useState([])

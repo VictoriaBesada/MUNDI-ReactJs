@@ -5,7 +5,7 @@ import React from 'react';
 const Carrito = () => {
     return(
         <Container>
-            <h2>Este es el carrito de compras</h2>
+            <h2>CART</h2>
         </Container>
     )
 }

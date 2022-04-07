@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { getProductById } from '../../data/getProducts'
 
-const ItemDetailContainer = ({id}) => {
+const ItemDetailContainer = ({ id }) => {
 
     const [product, setProduct] = useState([null])
 
@@ -10,7 +10,7 @@ const ItemDetailContainer = ({id}) => {
         getProductById(Number(id), setProduct);
     }, [id]);
 
-    return(
+    return (
         <div>
             <section>
                 {product ? <ItemDetail item={product} /> : <p>Buscando tu viaje...</p>}
