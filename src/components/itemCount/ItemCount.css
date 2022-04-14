@@ -1,18 +1,1 @@
-.contador{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-.contador button{
-    margin: 1rem;
-    border-radius: 30px;
-    border-width: 1px;
-}
-
-.contador p{
-    font-size: large;
-}
-
-
 

@@ -7,7 +7,6 @@ const DetailPage = () => {
 
   return (
     <main>
-      <h1>Detalle de producto</h1>
       <ItemDetailContainer id={id} />
     </main>
   );

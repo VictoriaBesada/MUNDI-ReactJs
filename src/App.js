@@ -10,24 +10,28 @@ import Destinos from './pages/DestinosPage';
 import Carrito from './pages/CarritoPage';
 import Footer from './components/Footer/Footer';
 import DetailPage from './pages/ItemDetailPage';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/NosotrosPage' element={<Nosotros />} />
-          <Route path='/' element={<Home />} />
-          <Route path='/DestinosPage' element={<Destinos />} />
-          <Route path='/ContactPage' element={<Contact />} />
-          <Route path='/CarritoPage' element={<Carrito />} />
-          <Route path='/:products/' element={<Home/>} />
-          <Route path='/:products/:id' element={<DetailPage/>}/>
-          <Route path='*' element={<PageNotFound />} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path='/NosotrosPage' element={<Nosotros />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/HomePage' element={<Home/>} />
+            <Route path='/DestinosPage' element={<Destinos />} />
+            <Route path='/ContactPage' element={<Contact />} />
+            <Route path='/CarritoPage' element={<Carrito />} />
+            <Route path='/:category/' element={<Home />} />
+            <Route path='/:category/:id' element={<DetailPage />} />
+            <Route path='*' element={<PageNotFound />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
     </div>
   )
 }

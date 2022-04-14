@@ -9,15 +9,17 @@ const getProducts = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-const getAllProductsFromDB = async (setState) => {
+const getAllProductsFromDB = async () => {
     try {
       const result = await getProducts;
-      setState(result);
+      return result;
     } catch (error) {
       console.log(error);
       alert('No podemos mostrar los viajes en este momento');
     }
 };
+
+
 
 const getProductById = async (id, setState) => {
     try {
