@@ -122,7 +122,7 @@ const CartPage = () => {
                             <p>Total</p>
                             <span>$ {totalPrice}</span>
                         </div>
-                        <Button className='btn-custom' onClick={() => setOpenModal(true)}>Completar Compra</Button>
+                        <Button className='btn-custom' onClick={() => setOpenModal(true)}>Finalizar compra</Button>
                     </div>
                 </div>
             </div>

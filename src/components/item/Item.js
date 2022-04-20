@@ -45,7 +45,7 @@ export default function Item ({data}) {
         <h3>Turismo: {category}</h3>
         <p>Precio : USD {precio}</p>
         <button onClick={changePage} style={{ textDecoration: 'underline', fontWeight: 'bold', border:'none', backgroundColor:'white' }}>Ver itinerario</button>
-        <Button onClick={onAdd} className="btn-custom">Comprar</Button>
+        <Button onClick={onAdd} className="btn-custom">Agregar al carrito</Button>
       </div>
     </div>
   );

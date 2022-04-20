@@ -92,6 +92,7 @@ const CartWidget = () => {
                 {cartProducts.map( (cartProduct) => {
                     return(
                         <MenuItem className='item-cart-modal' key={cartProduct.id}>
+                            <div className='carrito'>
                             <div className='item-cart-modal__img'>
                                 <img src={cartProduct.imagen} alt='' /> 
                             </div>
@@ -101,6 +102,7 @@ const CartWidget = () => {
                             </div>
                             <div className='item-cart-modal__action'>
                                 <DeleteIcon />
+                            </div>
                             </div>
                         </MenuItem>
                     )

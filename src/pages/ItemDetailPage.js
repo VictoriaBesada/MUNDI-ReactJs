@@ -58,7 +58,7 @@ const DetailPage = () => {
                 <p className='info__text'>{product.descripcion}</p>
                 <p className='info__subtitle'>Itinerario</p>
                 <p className='info__text detail__text'>{product.itinerario}</p>
-                <Button className='detail__btn-buy'>COMPRAR</Button>
+                <Button className='detail__btn-buy'>Agregar al carrito</Button>
             </div>
             </div>
         </Container>
