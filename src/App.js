@@ -19,15 +19,15 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path='/NosotrosPage' element={<Nosotros />} />
-            <Route path='/' element={<Home />} />
-            <Route path='/HomePage' element={<Home/>} />
-            <Route path='/DestinosPage' element={<Destinos />} />
-            <Route path='/ContactPage' element={<Contact />} />
-            <Route path='/CarritoPage' element={<Carrito />} />
-            <Route path='/:category/' element={<Home />} />
-            <Route path='/:category/:id' element={<DetailPage />} />
-            <Route path='*' element={<PageNotFound />} />
+            <Route path="/NosotrosPage" element={<Nosotros />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/HomePage" element={<Home/>} />
+            <Route path="/DestinosPage" element={<Destinos />} />
+            <Route path="/ContactPage" element={<Contact />} />
+            <Route path="/CarritoPage" element={<Carrito />} />
+            <Route path="/:category/" element={<Home />} />
+            <Route path="/:category/:id" element={<DetailPage />} />
+            <Route path= "*" element={<PageNotFound />} />
           </Routes>
           <Footer />
         </BrowserRouter>

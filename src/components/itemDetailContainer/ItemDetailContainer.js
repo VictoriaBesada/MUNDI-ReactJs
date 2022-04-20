@@ -1,14 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { getProductById } from '../../data/getProducts'
+import { getProductById } from '../../data/getProducts';
+import mockProducto from '../../utils/productMock';
+const ItemDetailContainer = () => {
 
-const ItemDetailContainer = ({ id }) => {
+    // const [product, setProduct] = useState([null])
 
-    const [product, setProduct] = useState([null])
+    // useEffect(() => {
+    //     getProductById(Number(id), setProduct);
+    // }, [id]);
 
-    useEffect(() => {
-        getProductById(Number(id), setProduct);
-    }, [id]);
+    const [dataProduct, setDataProduct] = useState({})
+
+    const getProduct = () => {
+        return new Promise((resolve, reject) => {
+            return resolve(mockProducto)
+        })
+    }
+
+    useEffect( () => {
+        getProduct().then( (producto) => {
+            setDataProduct(producto)
+            //console.log("Llamada al mock:", producto)
+        }).finally( () => {
+            console.log("Termino la llamada")
+        })
+    }, [])
 
     return (
         <div>

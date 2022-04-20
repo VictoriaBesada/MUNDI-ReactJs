@@ -1,7 +1,8 @@
-import React, { useContext} from 'react';
+import React, { useContext, useEffect} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { useNavigate } from 'react-router-dom';
 import CartContext from '../../context/CartContext';
+import Button from '@mui/material/Button';
 import './Item.css';
 
 export default function Item ({data}) {
@@ -11,7 +12,7 @@ export default function Item ({data}) {
   const { titulo, precio, stock, imagen, id, category } = data
 
   const changePage = () => {
-    navigate(`/products/${id}`)
+    navigate(`/productos/${id}`)
   }
 
   const onAdd = (e) => {
@@ -19,6 +20,21 @@ export default function Item ({data}) {
     console.log("Productos agregados:", cartProducts) 
     addProductToCart(data)
   }
+
+  useEffect( () => {
+    console.log("cartProducts:", cartProducts)
+    const onScrollWindow = () => {
+        if(window.scrollY > 100 ){
+            console.log("Scroll mayor a 100")
+        }
+    }
+    window.addEventListener("scroll", onScrollWindow)
+    
+    return () => {
+        window.removeEventListener("scroll", onScrollWindow)
+    }
+    
+}, [])
 
   return (
     <div className="card-item estilos" style={{margin:'2rem', border:'1px solid black', borderRadius: '25px', padding: '20px'}}>
@@ -29,7 +45,7 @@ export default function Item ({data}) {
         <h3>Turismo: {category}</h3>
         <p>Precio : USD {precio}</p>
         <button onClick={changePage} style={{ textDecoration: 'underline', fontWeight: 'bold', border:'none', backgroundColor:'white' }}>Ver itinerario</button>
-        <ItemCount stock={stock} onClick={onAdd}/>
+        <Button onClick={onAdd} className="btn-custom">Comprar</Button>
       </div>
     </div>
   );

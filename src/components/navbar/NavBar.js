@@ -2,7 +2,7 @@ import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
 
@@ -33,7 +33,9 @@ function NavBar() {
                 <Link to={'/ContactPage'} style={{color:'black', textDecoration:'none'}}>Contacto</Link>
             </li>
             <li style={{ float: 'right' }}>
-                <Link to={'/CarritoPage'} style={{color:'black', textDecoration:'none'}}><CartWidget/></Link >
+                <Link to={'/CarritoPage'} style={{color:'black', textDecoration:'none'}}>
+                  <CartWidget/>
+                  </Link >
             </li>
           </ul>
           <div className='animation start-home'></div>

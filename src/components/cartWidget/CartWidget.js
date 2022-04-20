@@ -15,6 +15,8 @@
 // }
 
 // export default CartWidget;
+
+
 import React from 'react';
 import { useState, useContext } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -36,6 +38,7 @@ const CartWidget = () => {
     const handleClose = () => {
       setAnchorEl(null);
     };
+    console.log("cartProducts: ", cartProducts)
 
     return (
         <div className='cart-button'>
@@ -90,7 +93,7 @@ const CartWidget = () => {
                     return(
                         <MenuItem className='item-cart-modal' key={cartProduct.id}>
                             <div className='item-cart-modal__img'>
-                                <img src={`./${cartProduct.imagen}`} alt='' /> 
+                                <img src={cartProduct.imagen} alt='' /> 
                             </div>
                             <div className='item-cart-modal__info'>
                                 <p>{cartProduct.titulo}</p>
