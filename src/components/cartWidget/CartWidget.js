@@ -1,22 +1,3 @@
-// import React, {useContext} from 'react';
-// import { BsCartPlus } from 'react-icons/bs';
-// import CartContext from '../../context/CartContext';
-
-// const CartWidget = () => {
-
-//   const { cartProducts } = useContext(CartContext)
-//   return (
-//     <div>
-//     <h3><BsCartPlus /></h3>
-//     <div>{cartProducts.length}</div>
-//     </div>
-//   )
-
-// }
-
-// export default CartWidget;
-
-
 import React from 'react';
 import { useState, useContext } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';

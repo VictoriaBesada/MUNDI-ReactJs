@@ -1,19 +1,3 @@
-// import { Container } from '@mui/material';
-// import React from 'react';
-// import CartList from '../components/Cart/CartList';
-
-
-// const Carrito = () => {
-//     return(
-//         <Container>
-//             <h1>Carrito</h1>
-//             <CartList/>
-//         </Container>
-//     )
-// }
-
-// export default Carrito;
-
 import React from 'react';
 import {useState, useContext} from 'react'
 import Container from '@mui/material/Container';

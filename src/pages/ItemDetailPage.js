@@ -1,19 +1,4 @@
 import React from 'react';
-// import { useParams } from 'react-router-dom';
-// import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
-
-// const DetailPage = () => {
-//   let { id } = useParams();
-
-//   return (
-//     <main>
-//       <ItemDetailContainer id={id} />
-//     </main>
-//   );
-// };
-
-// export default DetailPage;
-
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';

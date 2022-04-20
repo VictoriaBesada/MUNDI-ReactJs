@@ -1,20 +1,10 @@
-import React, {useContext} from 'react';
-// import CartContext from '../../context/CartContext';
+import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import { useEffect, useState } from 'react';
+
 
 
 const ItemDetail = ({ data }) => {
 
-  // const cartContext = useContext(CartContext);
-  // const { addProduct } = cartContext;
-
-  // const onAdd = (count) => {
-  //   addProduct(item, count);
-  //   console.log(`Agregaste ${count} pasajeros a tu viaje!`);
-  // }
   return (
     <div className="card-item" style={{margin:'3rem'}} >
       <h1>{data.titulo}</h1>
