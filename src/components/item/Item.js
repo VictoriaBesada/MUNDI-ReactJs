@@ -7,9 +7,9 @@ import './Item.css';
 
 export default function Item ({data}) {
 
-  const navigate = useNavigate();
   const { cartProducts, addProductToCart } = useContext(CartContext)
   const { titulo, precio, stock, imagen, id, category } = data
+  const navigate = useNavigate();
 
   const changePage = () => {
     navigate(`/productos/${id}`)
@@ -44,7 +44,7 @@ export default function Item ({data}) {
         <h2>{titulo}</h2>
         <h3>Turismo: {category}</h3>
         <p>Precio : USD {precio}</p>
-        <button onClick={changePage} style={{ textDecoration: 'underline', fontWeight: 'bold', border:'none', backgroundColor:'white' }}>Ver itinerario</button>
+        <button onClick={changePage} style={{ textDecoration: 'underline', fontWeight: 'bold', border:'none', backgroundColor:'white', margin:'1rem' }}>Ver itinerario</button>
         <Button onClick={onAdd} className="btn-custom">Agregar al carrito</Button>
       </div>
     </div>

@@ -7,10 +7,17 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import ModalCustom from '../components/Modal/Modal';
 import db from '../firebase'
 import { addDoc, collection } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+
 
 const CartPage = () => {
     const { cartProducts, deleteProduct, totalPrice } = useContext(CartContext)
     const [openModal, setOpenModal] = useState(false)
+    const navigate = useNavigate();
+
+    const changePage = () => {
+      navigate(`/HomePage`)
+    }
     const [formData, setFormData] = useState({
         name: '',
         phone: '',  
@@ -61,7 +68,7 @@ const CartPage = () => {
     }
 
     return(
-        <Container className='container-general'> 
+        <Container className='container-general carritoFinal'> 
             <div className='cart-section'>
                 <div className='col-cart-table__head'>
                     <h2>Producto</h2>
@@ -96,7 +103,7 @@ const CartPage = () => {
                 })}
                 
                 <div className='cart-footer'>
-                    <Button className='btn-custom'>Continuar comprando</Button>
+                    <Button className='btn-custom' onClick={changePage}>Continuar comprando</Button>
                     <div className='cart-checkout-details'>
                         <div className='cart-checkout__subtotal'>
                             <p>Subtotal</p>
@@ -119,8 +126,8 @@ const CartPage = () => {
                         <p>Su numero de orden es: {successOrder}</p>
                     </div>
                 ) : (
-                    <>
-                        <h2>FORM USUARIO</h2>
+                    <>  <div className='modalCarrito'>
+                        <h2>Ingrese sus datos:</h2>
                         <form onSubmit={handleSubmit}>
                             <input type="text" name='name' placeholder='Nombre' 
                                 onChange={handleChange} 
@@ -130,13 +137,14 @@ const CartPage = () => {
                                 onChange={handleChange} 
                                 value={formData.phone}
                             />
-                            <input type="mail" name='email' placeholder='mail' 
+                            <input type="mail" name='email' placeholder='Email' 
                                 onChange={handleChange} 
                                 value={formData.email}
                             />
 
-                            <Button type="submit">Enviar</Button>
+                            <Button className='botonFinal' type="submit">Enviar</Button>
                         </form>
+                        </div>
                     </>
                 )}
                 

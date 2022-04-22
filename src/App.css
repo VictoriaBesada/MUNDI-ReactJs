@@ -18,7 +18,9 @@ header.main-header li button:hover {
   width: 100%;
   margin-bottom: 20px;
 }
-
+.carritoFinal{
+  margin: 2rem;
+}
 
 .container-detail {
   display: flex;
@@ -135,7 +137,7 @@ form > button:hover {
   color: white !important;
 }
 .btn-custom,.btn-custom:hover {
-  background: black !important;
+  background: blueviolet !important;
   border-radius: 0px !important;
   color: white !important;
   padding: 5px 20px !important;
@@ -353,4 +355,11 @@ button.btn-delete {
 
 button.btn-delete:hover {
   transform: scale(1.09);
+}
+
+.modalCarrito{
+  margin: 4rem;
+}
+.botonFinal{
+  width: 100%;
 }

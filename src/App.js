@@ -6,7 +6,6 @@ import PageNotFound from './pages/PageNotFound';
 import Home from './pages/HomePage';
 import Contact from './pages/ContactPage';
 import Nosotros from './pages/NosotrosPage';
-import Destinos from './pages/DestinosPage';
 import Carrito from './pages/CarritoPage';
 import Footer from './components/Footer/Footer';
 import DetailPage from './pages/ItemDetailPage';
@@ -22,7 +21,6 @@ function App() {
             <Route path="/NosotrosPage" element={<Nosotros />} />
             <Route path="/" element={<Home />} />
             <Route path="/HomePage" element={<Home/>} />
-            <Route path="/DestinosPage" element={<Destinos />} />
             <Route path="/ContactPage" element={<Contact />} />
             <Route path="/CarritoPage" element={<Carrito />} />
             <Route path="/:category/" element={<Home />} />

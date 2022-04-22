@@ -27,9 +27,6 @@ function NavBar() {
               <img src='/logo.png' className='logo' alt='logo' onClick={home}></img>
             </li>
             <li>
-                <Link to={'/DestinosPage'} style={{color:'black', textDecoration:'none'}}>Destinos</Link >
-            </li>
-            <li>
                 <Link to={'/ContactPage'} style={{color:'black', textDecoration:'none'}}>Contacto</Link>
             </li>
             <li style={{ float: 'right' }}>

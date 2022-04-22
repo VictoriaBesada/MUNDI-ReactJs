@@ -91,7 +91,7 @@ const CartWidget = () => {
                 
                 <Divider />
                 <div className='footer-modal-cart'>
-                    <Button className="btn-custom"><Link to="/cart">Iniciar la compra</Link></Button>
+                    <Button className="btn-custom"><Link to="/CarritoPage">Iniciar la compra</Link></Button>
                 </div>
             </Menu>
         </div>
