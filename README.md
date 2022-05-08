@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Bienvenidos a Mundi!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hola! Soy Victoria Besada, la creadora de **Mundi Travel** y te doy la bienvenida a mi agencia de viajes online. 
 
-## Available Scripts
 
-In the project directory, you can run:
+# Como surgió Mundi
 
-### `npm start`
+Este proyecto tiene como origen uno de mis sueños de toda la vida, que es tener mi propia agencia de viajes. Yo soy licenciada en Turismo y Hotelería y como apasionada del turismo siempre tuve como objetivo tener mi propia agencia online. Sin embargo, hace unos meses me empezó  a interesar mucho la tecnología y la programación mas específicamente y este proyecto me pareció una excelente oportunidad para combinar mis dos pasiones. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Sobre el proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El objetivo de este sitio web es comercializar paquetes de viajes populares alrededor de todo el mundo y brindar al usuario una experiencia de compra fácil y dinámica.
 
-### `npm test`
+En la página principal podemos observar todos los paquetes de viajes disponibles para comprar, los mismos se muestran en cards que incluyen una imagen ilustrativa del destino, el nombre de la ciudad, el tipo de turismo que se puede practicar en esa región, el precio global del paquete con todo incluido, un botón para ver el detalle del paquete y un botón de compra que agrega el paquete al carrito.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Al hacer click en "Ver itinerario", podemos ver una breve descripción del producto y el itinerario detallado día por día de lo que incluye el paquete. Además, también esta incluido el botón de comprar, que también agrega el producto al carrito. 
 
-### `npm run build`
+Una vez que terminamos de agregar productos al carrito, hay que hacer click en el widget del carrito, ubicado en el navbar, el cual nos redirige a la pagina de carrito. Allí, tendremos una lista de todos los productos que agregamos y también tenemos un icono de un cesto en caso de que queramos eliminar algún producto. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Una vez que estemos listos para comprar, se hace click en el botón "Finalizar compra", el cual abre un modal que pide nuestros datos y luego nos devuelve el código de compra de nuestra orden.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Por otro lado, en la pagina Nosotros, hay una breve historia de cómo surgió Mundi Travel y de la misión, vision y valores de la empresa. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Por último, decidi implementar una página de contacto para que el usuario pueda contactar directamente al equipo de atención al cliente en caso de que tenga alguna consulta o quiera personalizar algún paquete.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estructura del proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este sitio web esta creado usando React Js y esta compuesto por: 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- 10 componentes. 
+> Los cuales construyen el navbar, catálogo, detalle de producto, cart widget, carrito, contador y footer,
+- 6 paginas.
+> Las cuales contienen el home,  detalle de producto, carrito, página no encontrada, nosotros y contacto.
+- 1 contexto. 
+> Perteneciente al Cart.
+- 1 data.
+> Contiene un array de los productos a comercializar.
+- 1 util.
+> Contiene un mock de producto.
+- App.js y App.css.
+> Archivos en los cuales se encuentran las rutas del sitio web y los estilos principales de los diferentes componentes y páginas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Además utilice firebase para crear la base de datos de mis productos.
 
-## Learn More
+## Muestra de compra
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
