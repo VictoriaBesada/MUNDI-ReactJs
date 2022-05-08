@@ -1,18 +1,15 @@
-.nosotros{
-    grid-area: nosotros;
-    font-size: small;
-    padding: 1.5rem;
+.seguinos{
+    grid-area: seguinos;
 }
 
-.destinos{
-    grid-area: destinos;
+.contacto{
+    grid-area: contacto;
     padding: 1.5rem;
 }
 
 .links{
     grid-area: links;
     padding: 1.5rem;
-
 }
 
 footer{
@@ -22,7 +19,7 @@ footer{
     color: white;
     width: 100%;
     grid-template-areas: 
-    'nosotros links destinos';
+    'links contacto seguinos';
     grid-template-columns: 3fr 3fr 3fr;
 }
 
@@ -30,4 +27,25 @@ footer{
     list-style: none;
     display: block;
     background: none;
+}
+
+.contactoTitulo{
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+
+.link{
+    padding-bottom: 10px;
+}
+
+.link:hover{
+    font-weight: 800;
+}
+
+.firma{
+    text-align: center;
+}
+.seguinos h5{
+    font-size: 1rem;
+    text-transform: uppercase;
 }

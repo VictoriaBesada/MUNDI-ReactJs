@@ -1,31 +1,61 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import './Footer.css';
 
 
+
 const Footer = () => {
+
+    const navigate = useNavigate();
+
+
+    const Home = () => {
+        navigate('/HomePage')
+    }
+    const Nosotros = () => {
+        navigate('/NosotrosPage')
+    }
+    const Contacto = () => {
+        navigate('/ContactPage')
+    }
     return (
         <div>
             <footer>
-                <div className="nosotros">
-                    <p >Line 15:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md </p>
+                <div className="seguinos">
+                <h5>¡Seguínos!</h5>
+                <InstagramIcon></InstagramIcon>
+                <FacebookIcon></FacebookIcon>
+                <TwitterIcon></TwitterIcon>
+                <WhatsAppIcon></WhatsAppIcon>
+                <YouTubeIcon></YouTubeIcon>
                 </div>
                 <div className="links">
                     <ul className="lista">
-                        <li>Home</li>
-                        <li>Nosotros</li>
-                        <li>Contacto</li>
+                        <li onClick={Home} className="link">Home</li>
+                        <li onClick={Nosotros} className="link">Nosotros</li>
+                        <li onClick={Contacto} className="link">Contacto</li>
                     </ul>
                 </div>
-                <div className="destinos">
+                <div className="contacto">
                     <ul className="lista">
-                        <li>Destinos</li>
-                        <li>Americas</li>
-                        <li>Europa</li>
-                        <li>Asia</li>
+                        <li className="contactoTitulo">Contacto</li>
+                        <li>Email: travel@mundi.com</li>
+                        <li>Telefono: 0800 111 222</li>
+                        <li>Horarios: Lunes a viernes - 9hs a 19hs</li>
                     </ul>
                 </div>
             </footer>
+            <div className="firma">
+                <p>Sitio web desarrollado por Victoria Besada</p>
+            </div>
         </div>
+
+
     )
 }
 

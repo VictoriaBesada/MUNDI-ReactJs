@@ -235,7 +235,6 @@ header.main-header.light-mode .cart-button * {
 
 /*CartPage*/
 
-.cart-section {}
 
 .cart-section .col-cart-table__head {
     display: flex;
@@ -335,11 +334,11 @@ header.main-header.light-mode .cart-button * {
 }
 
 .container-progress {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 80vh;
+  position: fixed;
+  left : 50%;
+  bottom : 0;
+  right : 0;
+  top : 50%;
 }
 
 button.btn-delete {
@@ -362,4 +361,63 @@ button.btn-delete:hover {
 }
 .botonFinal{
   width: 100%;
+}
+.inputText{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.inputSubmit {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.containerContacto {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.ordenGenerada{
+  margin: 2rem;
+}
+
+#modal-modal-title{
+  font-weight: bold;
+}
+
+.linkForm{
+  text-decoration: underline;
+}
+
+.flexbox-container{
+  display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+  margin: 4rem;
+}
+
+.flexbox-container > div {
+	width: 50%;
+	padding: 10px;
+  background: #fff;
+}
+
+.flexbox-container > div:first-child {
+  border-left:  solid grey;
+  padding-left: 3rem;
+}
+
+.flexbox-container > div:last-child{
+  border-left:  solid grey;
+  padding-left: 3rem;
+
 }

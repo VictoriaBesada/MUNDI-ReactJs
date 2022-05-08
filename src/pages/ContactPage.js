@@ -3,7 +3,6 @@ import { Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import '../styles/Contact.css';
 
 
 const Contact = () => {
@@ -25,22 +24,22 @@ const Contact = () => {
 
     return (
         <Container>
-            <div className="container" style={{ margin: '2rem' }}>
+            <div className="containerContacto" style={{ margin: '2rem' }}>
                 <form>
                     <label>Nombre</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Tu nombre.." />
+                    <input type="text" id="fname" name="firstname" placeholder="Tu nombre.." className='inputText'/>
                     <label>Apellido</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Tu apellido.." />
+                    <input type="text" id="lname" name="lastname" placeholder="Tu apellido.." className='inputText'/>
                     <label>Tipo de consulta</label>
-                    <select>
+                    <select className='inputText'>
                         <option>Elegi una opcion</option>
                         <option>Cotizacion</option>
                         <option>Cambio/Cancelacion</option>
                         <option>Otro</option>
                     </select>
                     <label>Mensaje</label>
-                    <textarea id="subject" name="subject" placeholder="Escribi tu consulta.." style={{ height: '200px' }}></textarea>
-                    <input onClick={handleOpen} type="submit" value="Enviar formulario" style={{ backgroundColor: '#C5ACF7', color: 'black' }} />
+                    <textarea id="subject" className='inputText' name="subject" placeholder="Escribi tu consulta.." style={{ height: '200px' }}></textarea>
+                    <input onClick={handleOpen} type="text" value="Enviar formulario" className='inputSubmit' style={{ backgroundColor: '#C5ACF7', color: 'black', textAlign:'center' }} />
                 </form>
             </div>
             <Modal

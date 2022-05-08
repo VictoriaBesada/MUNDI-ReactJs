@@ -39,9 +39,7 @@ const DetailPage = () => {
             <div className='container-detail__info'>
                 <h3 className='info__title'>{product.titulo}</h3>
                 <p className='info__text'>$ {product.precio}</p>
-                <p className='info__subtitle'>Descripcion</p>
-                <p className='info__text'>{product.descripcion}</p>
-                <p className='info__subtitle'>Itinerario</p>
+                <p className='info__subtitle'>Servicios incluidos:</p>
                 <p className='info__text detail__text'>{product.itinerario}</p>
                 <Button className='detail__btn-buy'>Agregar al carrito</Button>
             </div>

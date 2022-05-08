@@ -29,8 +29,8 @@ const CartPage = () => {
             items: cartProducts.map( (cartProduct)=> {
                 return {
                     id: cartProduct.id,
-                    title: cartProduct.title,
-                    price: cartProduct.price
+                    title: cartProduct.titulo,
+                    price: cartProduct.precio
                 }
             }),
             total: totalPrice
@@ -72,7 +72,6 @@ const CartPage = () => {
             <div className='cart-section'>
                 <div className='col-cart-table__head'>
                     <h2>Producto</h2>
-                    <h2>Descripcion</h2>
                     <h2>Precio Unitario</h2>
                     <h2>Cantidad</h2>
                     <h2>Quitar</h2>
@@ -121,9 +120,11 @@ const CartPage = () => {
             <ModalCustom handleClose={() => setOpenModal(false)} open={openModal}>
                 
                 {successOrder ? (
-                    <div>
+                    <div className='ordenGenerada'>
+                        <img src={'logo.png'}  className='logo'/>
                         <h3>Orden generada correctamente</h3>
                         <p>Su numero de orden es: {successOrder}</p>
+                        <p>Muchas gracias por confiar en nosotros!</p>
                     </div>
                 ) : (
                     <>  <div className='modalCarrito'>
