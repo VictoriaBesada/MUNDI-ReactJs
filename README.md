@@ -45,4 +45,4 @@ Además utilice firebase para crear la base de datos de mis productos.
 
 ## Muestra de compra
 
-![Alt Text](ejemplo-compra.gif)
+![Alt Text](./public/ejemplo-compra.gif)
