@@ -7,32 +7,32 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import './Footer.css';
 
-
-
 const Footer = () => {
 
     const navigate = useNavigate();
 
-
     const Home = () => {
         navigate('/HomePage')
     }
+
     const Nosotros = () => {
         navigate('/NosotrosPage')
     }
+
     const Contacto = () => {
         navigate('/ContactPage')
     }
+
     return (
         <div>
             <footer>
                 <div className="seguinos">
-                <h5>¡Seguínos!</h5>
-                <InstagramIcon></InstagramIcon>
-                <FacebookIcon></FacebookIcon>
-                <TwitterIcon></TwitterIcon>
-                <WhatsAppIcon></WhatsAppIcon>
-                <YouTubeIcon></YouTubeIcon>
+                    <h5>¡Seguínos!</h5>
+                    <InstagramIcon></InstagramIcon>
+                    <FacebookIcon></FacebookIcon>
+                    <TwitterIcon></TwitterIcon>
+                    <WhatsAppIcon></WhatsAppIcon>
+                    <YouTubeIcon></YouTubeIcon>
                 </div>
                 <div className="links">
                     <ul className="lista">
@@ -54,8 +54,6 @@ const Footer = () => {
                 <p>Sitio web desarrollado por Victoria Besada</p>
             </div>
         </div>
-
-
     )
 }
 

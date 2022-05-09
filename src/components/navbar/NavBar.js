@@ -9,31 +9,27 @@ function NavBar() {
   const navega = useNavigate();
 
   const home = () => {
-  navega(`/HomePage`)
-}
+    navega(`/HomePage`)
+  }
 
   return (
     <header className='header'>
       <div>
-        <div id ="navigation">
+        <div id="navigation">
           <ul>
             <li >
-                <Link to={'/HomePage'} style={{color:'black', textDecoration:'none'}}>Home</Link>
+              <Link to={'/HomePage'} style={{ color: 'black', textDecoration: 'none' }}>Home</Link>
             </li>
             <li>
-                <Link to={'/NosotrosPage'} style={{color:'black', textDecoration:'none'}}>Nosotros</Link >
+              <Link to={'/NosotrosPage'} style={{ color: 'black', textDecoration: 'none' }}>Nosotros</Link >
             </li>
             <li>
               <img src='/logo.png' className='logo' alt='logo' onClick={home}></img>
             </li>
             <li>
-                <Link to={'/ContactPage'} style={{color:'black', textDecoration:'none'}}>Contacto</Link>
+              <Link to={'/ContactPage'} style={{ color: 'black', textDecoration: 'none' }}>Contacto</Link>
             </li>
-            <li style={{ float: 'right' }}>
-                <Link to={'/CarritoPage'} style={{color:'black', textDecoration:'none'}}>
-                  <CartWidget/>
-                  </Link >
-            </li>
+            <CartWidget />
           </ul>
           <div className='animation start-home'></div>
         </div>

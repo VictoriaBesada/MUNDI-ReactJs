@@ -6,7 +6,7 @@ const ItemListContainer = () => {
   return (
     <section className="item-list-container">
       <h2 className="item-list-container__title">Destinos populares</h2>
-      <ItemList/>
+      <ItemList />
     </section>
   );
 };

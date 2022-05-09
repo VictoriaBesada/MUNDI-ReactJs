@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useContext} from 'react'
+import { useState, useContext } from 'react'
 import Container from '@mui/material/Container';
 import { Button } from '@mui/material';
 import CartContext from '../context/CartContext';
@@ -9,24 +9,26 @@ import db from '../firebase'
 import { addDoc, collection } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
-
 const CartPage = () => {
+
     const { cartProducts, deleteProduct, totalPrice } = useContext(CartContext)
     const [openModal, setOpenModal] = useState(false)
     const navigate = useNavigate();
 
     const changePage = () => {
-      navigate(`/HomePage`)
+        navigate(`/HomePage`)
     }
+
     const [formData, setFormData] = useState({
         name: '',
-        phone: '',  
+        phone: '',
         email: '',
     })
+
     const [order, setOrder] = useState(
         {
-            buyer : formData,
-            items: cartProducts.map( (cartProduct)=> {
+            buyer: formData,
+            items: cartProducts.map((cartProduct) => {
                 return {
                     id: cartProduct.id,
                     title: cartProduct.titulo,
@@ -36,15 +38,19 @@ const CartPage = () => {
             total: totalPrice
         }
     )
+    
     const [successOrder, setSuccessOrder] = useState()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        let prevOrder = {...order,
+        let prevOrder = {
+            ...order,
             buyer: formData
         }
-        setOrder({...order,
-            buyer: formData})
+        setOrder({
+            ...order,
+            buyer: formData
+        })
         pushOrder(prevOrder)
     }
 
@@ -53,11 +59,11 @@ const CartPage = () => {
         const orderDoc = await addDoc(orderFirebase, prevOrder)
         console.log("orden generada: ", orderDoc.id)
         setSuccessOrder(orderDoc.id)
-        
+
     }
 
     const handleChange = (e) => {
-        const {value, name} = e.target
+        const { value, name } = e.target
         console.log("value: ", value)
         console.log("name: ", name)
 
@@ -67,8 +73,8 @@ const CartPage = () => {
         })
     }
 
-    return(
-        <Container className='container-general carritoFinal'> 
+    return (
+        <Container className='container-general carritoFinal'>
             <div className='cart-section'>
                 <div className='col-cart-table__head'>
                     <h2>Destino</h2>
@@ -77,9 +83,9 @@ const CartPage = () => {
                     <h2>Cantidad</h2>
                     <h2>Eliminar</h2>
                 </div>
-                {cartProducts.map( (cartProduct) => {
+                {cartProducts.map((cartProduct) => {
                     const { precio, imagen, titulo, id } = cartProduct
-                    return(
+                    return (
                         <div className='cart-table__content' key={id}>
                             <div className='cart-table__content-img'>
                                 <img src={imagen} />
@@ -101,7 +107,7 @@ const CartPage = () => {
                         </div>
                     )
                 })}
-                
+
                 <div className='cart-footer'>
                     <Button className='btn-custom' onClick={changePage}>Continuar comprando</Button>
                     <div className='cart-checkout-details'>
@@ -113,16 +119,16 @@ const CartPage = () => {
                             <p>Total</p>
                             <span>$ {totalPrice}</span>
                         </div>
-                        <Button className='btn-custom' onClick={() => setOpenModal(true)}>Finalizar compra</Button>
+                        <Button className='btn-custom-compra' onClick={() => setOpenModal(true)}>Finalizar compra</Button>
                     </div>
                 </div>
             </div>
             {console.log("Order:", order)}
             <ModalCustom handleClose={() => setOpenModal(false)} open={openModal}>
-                
+
                 {successOrder ? (
                     <div className='ordenGenerada'>
-                        <img src={'logo.png'}  className='logo'/>
+                        <img src={'logo.png'} className='logo' />
                         <h3>Orden generada correctamente</h3>
                         <p>Su numero de orden es: {successOrder}</p>
                         <p>Muchas gracias por confiar en nosotros!</p>
@@ -131,25 +137,25 @@ const CartPage = () => {
                     <>  <div className='modalCarrito'>
                         <h2>Ingrese sus datos:</h2>
                         <form onSubmit={handleSubmit}>
-                            <input type="text" name='name' placeholder='Nombre' 
-                                onChange={handleChange} 
+                            <input type="text" name='name' placeholder='Nombre'
+                                onChange={handleChange}
                                 value={formData.name}
                             />
-                            <input type="number" name='phone' placeholder='Telefono' 
-                                onChange={handleChange} 
+                            <input type="number" name='phone' placeholder='Telefono'
+                                onChange={handleChange}
                                 value={formData.phone}
                             />
-                            <input type="mail" name='email' placeholder='Email' 
-                                onChange={handleChange} 
+                            <input type="mail" name='email' placeholder='Email'
+                                onChange={handleChange}
                                 value={formData.email}
                             />
 
                             <Button className='botonFinal' type="submit">Enviar</Button>
                         </form>
-                        </div>
+                    </div>
                     </>
                 )}
-                
+
             </ModalCustom>
         </Container>
     )

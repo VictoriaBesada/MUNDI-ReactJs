@@ -1,14 +1,10 @@
 .card-item{
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     box-shadow: 1px 1px 5px #0000002b;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
-}
-
-.btn-custom{
-    width: 5rem;
 }
 
 .card-item > img {
@@ -17,7 +13,6 @@
 
 .container-card-data {
     float: left;
-    width: 100%;
     padding: 10px;
 }
 

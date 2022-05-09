@@ -1,12 +1,13 @@
 import React from 'react'
 
-
 export default class CardClass extends React.Component {
-    constructor(props){
+
+    constructor(props) {
         super(props)
     }
-    render(){
-        return(
+
+    render() {
+        return (
             <div className="card-item">
                 <h2>{this.props.titulo}</h2>
                 <p>Precio : $ 100</p>

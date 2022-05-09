@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import mockProducto from '../../utils/productMock';
+
 const ItemDetailContainer = () => {
 
     const [dataProduct, setDataProduct] = useState({})
@@ -11,10 +12,10 @@ const ItemDetailContainer = () => {
         })
     }
 
-    useEffect( () => {
-        getProduct().then( (producto) => {
+    useEffect(() => {
+        getProduct().then((producto) => {
             setDataProduct(producto)
-        }).finally( () => {
+        }).finally(() => {
             console.log("Termino la llamada")
         })
     }, [])

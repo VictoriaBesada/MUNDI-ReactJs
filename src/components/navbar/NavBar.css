@@ -17,3 +17,7 @@ li{
   height: 70px;
   padding: 1rem;
 }
+
+li :hover{
+  font-weight: 600;
+}

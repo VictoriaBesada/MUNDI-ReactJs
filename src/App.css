@@ -140,12 +140,18 @@ form > button:hover {
   background: blueviolet !important;
   border-radius: 0px !important;
   color: white !important;
-  padding: 5px 20px !important;
   font-family: 'Montserrat' !important;
-  width: 100% !important;
+  margin: 0% !important;
+  width: 90%;
 }
-.btn-custom a {
+
+.btn-custom-compra{
+  background: blueviolet !important;
+  border-radius: 0px !important;
   color: white !important;
+  font-family: 'Montserrat' !important;
+  margin: 0% !important;
+  width: 100%;
 }
 
 .cart-button svg {
@@ -154,48 +160,36 @@ form > button:hover {
 
 .cart-button {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .cart-button p {
   color: black;
-  margin-left: 6px;
 }
 
 .cart-modal .MuiPaper-root.MuiPaper-elevation p {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  max-height: fit-content;
 }
 
 .cart-modal .MuiMenu-list {
   width: auto;
+  max-width: fit-content;
 }
 
-.footer-modal-cart {
-  padding: 0px 10px;
+.carrito {
+  display: flex;
 }
 
 .item-cart-modal__img {
   overflow: hidden;
-  width: 30%;
-  height: 100px;
-}
-
-.carrito{
-  display: flexbox;
-  flex-direction: column;
+  width: 100px;
 }
 
 .item-cart-modal__info {
-  width: 60%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.item-cart-modal__action {
-  width: 100%;
+  width: 100px;
+  margin: 0px 20px 0px 20px;
 }
 
 .item-cart-modal__img img {
@@ -210,31 +204,21 @@ form > button:hover {
   text-align: left !important;
 }
 
-
-/*Light Mode Styles*/
-header.main-header.light-mode {
-  background: white;
+.item-cart-modal__action {
+  display: flex;
+  align-self: center;
+  width: 50px;
+  margin: 0px 20px 0px 40px;
 }
 
-header.main-header.light-mode ul.navbar * {
-  color: black !important;
-  box-shadow: none;
+.cart-modal {
+  display: flex;
+  flex-direction: column;
 }
 
-.container-cards.light-mode .card-item * {
-  color: white;
+.footer-modal-cart {
+  text-align: center;
 }
-
-.container-cards.light-mode .card-item {
-  background: black;
-}
-
-header.main-header.light-mode .cart-button * {
-  color: black;
-}
-
-/*CartPage*/
-
 
 .cart-section .col-cart-table__head {
     display: flex;
@@ -375,10 +359,12 @@ button.btn-delete:hover {
 
 .inputSubmit {
   padding: 12px 20px;
+  color: white !important;
+  font-weight: 700;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%;
+  width: 96%;
 }
 
 .containerContacto {
@@ -420,4 +406,8 @@ button.btn-delete:hover {
   border-left:  solid grey;
   padding-left: 3rem;
 
+}
+
+.cart-modal{
+  color: white !important;
 }

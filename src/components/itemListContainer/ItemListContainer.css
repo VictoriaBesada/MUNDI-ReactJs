@@ -1,13 +1,13 @@
 .item-list-container {
-    min-height: 60vh;
-    padding: 30px;
-    margin-bottom: 60px;
-    background-color: white;
-  }
+  min-height: 60vh;
+  padding: 30px;
+  margin-bottom: 60px;
+  background-color: white;
+}
   
-  .item-list-container__title {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 2rem;
-  }
+.item-list-container__title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+}
   

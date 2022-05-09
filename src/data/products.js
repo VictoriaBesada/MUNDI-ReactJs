@@ -110,8 +110,8 @@ const productList = [
     {
         titulo: 'Rio De Janeiro',
         category: 'sol y playa',
-        imagen: 'https://i0.wp.com/imaginariodejaneiro.com/wp-content/uploads/2018/09/rio-de-janeiro-1963744_1280.jpg?w=1220&ssl=1', 
-        itinerario: 'Line 15:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md',       
+        imagen: 'https://i0.wp.com/imaginariodejaneiro.com/wp-content/uploads/2018/09/rio-de-janeiro-1963744_1280.jpg?w=1220&ssl=1',
+        itinerario: 'Line 15:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md',
         precio: 10000,
         id: 13,
         stock: 75,
