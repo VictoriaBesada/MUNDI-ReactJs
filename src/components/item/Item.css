@@ -1,3 +1,16 @@
+.card-item{
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 1px 1px 5px #0000002b;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-custom{
+    width: 5rem;
+}
+
 .card-item > img {
     width: 100%;
 }
@@ -30,7 +43,7 @@
 }
 
 .card-item__img {
-    height: 380px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -41,4 +54,5 @@
 .card-item:hover {
     cursor: pointer;
     transform: scale(1.05);
+    transition: all 0.3s ease;
 }

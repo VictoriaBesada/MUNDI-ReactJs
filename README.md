@@ -45,4 +45,4 @@ Además utilice firebase para crear la base de datos de mis productos.
 
 ## Muestra de compra
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+![Alt Text](ejemplo-compra.gif)

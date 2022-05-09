@@ -71,10 +71,11 @@ const CartPage = () => {
         <Container className='container-general carritoFinal'> 
             <div className='cart-section'>
                 <div className='col-cart-table__head'>
-                    <h2>Producto</h2>
-                    <h2>Precio Unitario</h2>
+                    <h2>Destino</h2>
+                    <h2>Nombre del paquete</h2>
+                    <h2>Precio por pax</h2>
                     <h2>Cantidad</h2>
-                    <h2>Quitar</h2>
+                    <h2>Eliminar</h2>
                 </div>
                 {cartProducts.map( (cartProduct) => {
                     const { precio, imagen, titulo, id } = cartProduct

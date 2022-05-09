@@ -15,7 +15,7 @@ export default function Item ({data}) {
     navigate(`/productos/${id}`)
   }
 
-  const onAdd = (e) => {
+    const onAdd = (e) => {
     e.stopPropagation()
     console.log("Productos agregados:", cartProducts) 
     addProductToCart(data)
@@ -37,9 +37,10 @@ export default function Item ({data}) {
 }, [])
 
   return (
-    <div className="card-item estilos" style={{margin:'2rem', border:'1px solid black', borderRadius: '25px', padding: '20px'}}>
-      <img src={imagen} style={{borderRadius: '25px'}} alt='' />
-
+    <div className="card-item estilos">
+      <div className='card-item__img'>
+      <img src={imagen} alt='' />
+      </div>
       <div className='container-card-data' style={{textAlign:'center'}}>
         <h2>{titulo}</h2>
         <h3>Turismo: {category}</h3>

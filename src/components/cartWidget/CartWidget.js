@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import CartContext from '../../context/CartContext';
 
 const CartWidget = () => {
-    const { cartProducts } = useContext(CartContext)
+    const { cartProducts, deleteProduct } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -82,7 +82,9 @@ const CartWidget = () => {
                                 <span>$ {cartProduct.precio}</span>
                             </div>
                             <div className='item-cart-modal__action'>
-                                <DeleteIcon />
+                            <button className='btn-delete' onClick={() => deleteProduct(cartProduct)}>
+                                    <DeleteIcon />
+                            </button>
                             </div>
                             </div>
                         </MenuItem>
